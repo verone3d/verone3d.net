@@ -9,18 +9,47 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .splash {
+            flex: 1;
+            display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
+            width: 100%;
         }
         img {
             max-width: 100%;
-            max-height: 100%;
+            max-height: 80vh;
+        }
+        .repeater {
+            text-align: center;
+            padding: 16px 0 24px;
+        }
+        .repeater h2 {
+            margin: 0 0 10px;
+            font-family: sans-serif;
+            font-size: 1rem;
+            color: #333;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
-    <img src="./images/verone3d-net-splash.jpg" alt="Verone3D.net Splash Image">
+    <div class="splash">
+        <img src="./images/verone3d-net-splash.jpg" alt="Verone3D.net Splash Image">
+    </div>
+    <div class="repeater">
+        <h2>W3OC Club Repeater Live Audio</h2>
+        <iframe width="325" height="245"
+            src="https://api.broadcastify.com/embed/player/?key=c92efd1d-4283-11f1-bb32-0ef97433b5f9&html5=1&feedId=47085"
+            style="display:block;border:none;filter:invert(1) hue-rotate(180deg);">
+            Your browser does not support iFrames.
+        </iframe>
+    </div>
 </body>
 </html>
